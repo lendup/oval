@@ -102,23 +102,16 @@ Besides field/property validation OVal implements Programming by Contract featur
 	</pluginRepositories>
 
 	<distributionManagement>
-		<downloadUrl>http://sourceforge.net/project/showfiles.php?group_id=145963
-		</downloadUrl>
 		<repository>
-			<id>oval-release</id>
-			<url>sftp://web.sourceforge.net/home/groups/o/ov/oval/htdocs/mvn-repo/release
+			<id>artifactory-releases</id>
+			<url>https://artifactory.gameofloans.com/artifactory/maven/
 			</url>
 		</repository>
 		<snapshotRepository>
-			<id>oval-snapshot</id>
-			<url>sftp://web.sourceforge.net/home/groups/o/ov/oval/htdocs/mvn-repo/snapshot
+			<id>artifactory-snapshot</id>
+			<url>https://artifactory.gameofloans.com/artifactory/maven-dev/
 			</url>
 		</snapshotRepository>
-		<site>
-			<id>oval-site</id>
-			<url>sftp://web.sourceforge.net/home/groups/o/ov/oval/htdocs/site
-			</url>
-		</site>
 	</distributionManagement>
 
 	<inceptionYear>2005</inceptionYear>
