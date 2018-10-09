@@ -37,6 +37,7 @@ public class SerializableMethod implements Serializable
 		/*
 		 * intentionally the following code is not synchronized
 		 */
+	    synchronized(CACHE) {
 		SerializableMethod sm = CACHE.get(method);
 		if (sm == null)
 		{
@@ -44,6 +45,7 @@ public class SerializableMethod implements Serializable
 			CACHE.put(method, sm);
 		}
 		return sm;
+	    }
 	}
 
 	private final Class< ? > declaringClass;
