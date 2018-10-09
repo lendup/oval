@@ -2,7 +2,7 @@ builderNode {
   checkout scm
   withCredentials([usernameCredentials(id: "jenkins_lendup.com", prefix: "ARTIFACTORY")]) {
     def mavenActions = "verify"
-    if ("${env.PULL_REQUEST_NUMBER}" == "") {
+    if (env.PULL_REQUEST_NUMBER == null) {
       mavenActions += " deploy"
     }
     stage(mavenActions) {
